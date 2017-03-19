@@ -12,3 +12,8 @@
 		main.cpp
 		stdafx.cpp
 		stdafx.h
+		Concept/
+			LDD.h
+			LDD.cpp
+			BLS.h
+			BLS.cpp

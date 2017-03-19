@@ -8,9 +8,11 @@
 #include <cassert>
 #include <inttypes.h>
 
+#include <iostream>
 #include <thread>
 #include <mutex>
 #include <condition_variable>
+#include <sstream>
 
 #if USE_EASTL
 // EASTL
@@ -36,3 +38,9 @@ using namespace eastl;
 
 using namespace std;
 #endif
+
+// GLM
+#include <glm/glm.hpp>
+
+// pugixml
+#include <pugixml.hpp>
