@@ -19,8 +19,8 @@ inline glm::vec4 rgbaToHslc(glm::vec4 &rgba)
 {
 	glm::vec4 hslc;
 	// REF: https://en.wikipedia.org/wiki/HSL_and_HSV
-	float cMax = std::max(std::max(rgba.x, rgba.y), rgba.z);
-	float cMin = std::min(std::min(rgba.x, rgba.y), rgba.z);
+	float cMax = std::max(std::max(rgba.r, rgba.g), rgba.b);
+	float cMin = std::min(std::min(rgba.r, rgba.g), rgba.b);
 
 	// Chroma
 	hslc.w = cMax - cMin;
@@ -28,12 +28,12 @@ inline glm::vec4 rgbaToHslc(glm::vec4 &rgba)
 	// Hue
 	if (hslc.w == 0.f)
 		hslc.x = 0.f;
-	else if (cMax == rgba.x)
-		hslc.x = fmod((rgba.y - rgba.z) / hslc.w, 6.f);
-	else if (cMax == rgba.y)
-		hslc.x = ((rgba.z - rgba.x) / hslc.w) + 2.f;
+	else if (cMax == rgba.r)
+		hslc.x = fmod((rgba.g - rgba.b) / hslc.w, 6.f);
+	else if (cMax == rgba.g)
+		hslc.x = ((rgba.b - rgba.r) / hslc.w) + 2.f;
 	else if (cMax == rgba.z)
-		hslc.x = ((rgba.x - rgba.y) / hslc.w) + 4.f;
+		hslc.x = ((rgba.r - rgba.g) / hslc.w) + 4.f;
 
 	// Lightness
 	hslc.z = 0.5f * (cMax + cMin);
@@ -51,17 +51,17 @@ inline float hslcDif(glm::vec4 &a, glm::vec4 &b)
 	// REF: http://stackoverflow.com/questions/4057475/rounding-colour-values-to-the-nearest-of-a-small-set-of-colours
 	glm::vec3 pt1, pt2;
 
-	float theta1 = a.x * PI;
+	float theta1 = a.x * PI / 3.f;
 	pt1.x = a.w * cos(theta1);
 	pt1.y = a.w * sin(theta1);
 	pt1.z = a.z;
 
-	float theta2 = b.x * PI;
+	float theta2 = b.x * PI / 3.f;
 	pt2.x = b.w * cos(theta2);
 	pt2.y = b.w * sin(theta2);
 	pt2.z = b.z;
 
-#if 1
+#if 0
 	return sqrt(pow(pt1.x - pt2.x, 2.f) + pow(pt1.y - pt2.y, 2.f) + pow(pt1.z - pt2.z, 2.f));
 #else
 	return glm::distance(pt1, pt2);

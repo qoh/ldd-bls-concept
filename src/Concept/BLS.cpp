@@ -298,7 +298,7 @@ blsGroup *blsGroup::CreateFromLDDGroup(std::shared_ptr<lddGroup> sourceGroup, st
 		for (size_t a = 0; a < numColors; ++a) {
 			if (colorset->colors[a]->rgba.a < 1.f)
 				continue;
-#if 1
+#if 0
 			float dist = sqrt(pow(colorset->colors[a]->rgba.r - sourceBrick->rgba.r, 2.f) + pow(colorset->colors[a]->rgba.g - sourceBrick->rgba.g, 2.f) + pow(colorset->colors[a]->rgba.b - sourceBrick->rgba.b, 2.f));
 #else
 			float dist = hslcDif(colorset->colors[a]->hslc, sourceBrick->hslc);
@@ -308,6 +308,7 @@ blsGroup *blsGroup::CreateFromLDDGroup(std::shared_ptr<lddGroup> sourceGroup, st
 				colorIdx = a;
 			}
 		}
+//		printf("%f %f %f | %f %f %f\n", sourceBrick->rgba.r * 255.f, sourceBrick->rgba.g * 255.f, sourceBrick->rgba.z * 255.f, sourceBrick->hslc.x * 60.f, sourceBrick->hslc.y * 100.f, sourceBrick->hslc.z * 100.f);
 //		printf("%f %f %f -> %lld %f (%f %f %f)\n", sourceBrick->rgba.r, sourceBrick->rgba.g, sourceBrick->rgba.b, colorIdx, closestColorDist, colorset->colors[colorIdx]->rgba.r, colorset->colors[colorIdx]->rgba.g, colorset->colors[colorIdx]->rgba.b);
 
 
