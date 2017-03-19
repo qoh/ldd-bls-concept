@@ -50,7 +50,7 @@ lddGroup *lddGroup::CreateFromFile(const char *file)
 		istringstream(transformStr)
 			>> rotationScale[0][0] >> rotationScale[1][0] >> rotationScale[2][0]
 			>> rotationScale[0][1] >> rotationScale[1][1] >> rotationScale[2][1]
-			>> rotationScale[0][2] >> rotationScale[1][2] >> rotationScale[2][1]
+			>> rotationScale[0][2] >> rotationScale[1][2] >> rotationScale[2][2]
 			>> translation[0] >> translation[1] >> translation[2];
 	//	printf("Transform: %s\n", transformStr.c_str());
 	//	printf("Translation: %f %f %f\n", translation[0], translation[1], translation[2]);

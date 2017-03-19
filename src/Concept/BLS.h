@@ -13,6 +13,8 @@ typedef struct lddGroup lddGroup;
 
 #define PI 3.14159265359f
 
+void BuildConversionMapLDDToBLS();
+
 inline glm::vec4 rgbaToHslc(glm::vec4 &rgba)
 {
 	glm::vec4 hslc;
@@ -47,23 +49,20 @@ inline glm::vec4 rgbaToHslc(glm::vec4 &rgba)
 inline float hslcDif(glm::vec4 &a, glm::vec4 &b)
 {
 	// REF: http://stackoverflow.com/questions/4057475/rounding-colour-values-to-the-nearest-of-a-small-set-of-colours
-
 	glm::vec3 pt1, pt2;
-	pt1.z = a.z;
-	pt2.z = b.z;
 
 	float theta1 = a.x * PI;
 	pt1.x = a.w * cos(theta1);
 	pt1.y = a.w * sin(theta1);
+	pt1.z = a.z;
 
 	float theta2 = b.x * PI;
 	pt2.x = b.w * cos(theta2);
 	pt2.y = b.w * sin(theta2);
+	pt2.z = b.z;
 
-	return (pt1 - pt2).length();
+	return glm::distance(pt1, pt2);
 }
-
-
 
 struct blsColor
 {
@@ -71,7 +70,7 @@ struct blsColor
 
 	glm::vec4 hslc;
 
-	uint32_t idx;
+	uint16_t idx;
 };
 
 struct blsColorset
@@ -87,6 +86,10 @@ struct blsColorset
 
 struct blsBrick
 {
+	string uiName;
+	glm::vec3 position;
+	uint16_t angleID;
+	uint16_t colorID;
 };
 
 struct blsGroup

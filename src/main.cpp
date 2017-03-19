@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 		return 0;
 //	printf("[%s] -> [%s]\n", inputFile.c_str(), outputFile.c_str());
 
+	BuildConversionMapLDDToBLS();
+
 	//----------- Begin ----------
 
 	std::shared_ptr<lddGroup> inputGroup(lddGroup::CreateFromFile(inputFile.c_str()));
