@@ -1,0 +1,14 @@
+/
+	cmake/
+		Macros.cmake
+		Targets.cmake
+		macros/
+			ParseTargetFileTreeIfChanged.cmake
+		targets/
+			Concept/
+				sources.txt
+				target.cmake
+	src/
+		main.cpp
+		stdafx.cpp
+		stdafx.h
