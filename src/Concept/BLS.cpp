@@ -47,11 +47,11 @@ void BuildConversionMapLDDToBLS()
 	
 	g_lddDesignIDToblsUIName[92947] = { "2x2 Round", 1, glm::vec3(1.f, 1.f, 0.6f) }; // 2x2 Profile Brick
 	g_lddDesignIDToblsUIName[3002] = { "2x3", 1, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Brick
-	g_lddDesignIDToblsUIName[6565] = { "2x3", 1, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Left Roof Tile                           Needs Better Match
-	g_lddDesignIDToblsUIName[6564] = { "2x3", 1, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Right Roof Tile                          Needs Better Match
+//	g_lddDesignIDToblsUIName[6565] = { "2x3", 1, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Left Roof Tile
+//	g_lddDesignIDToblsUIName[6564] = { "2x3", 1, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Right Roof Tile
 
-	g_lddDesignIDToblsUIName[41768] = { "2x4", 1, glm::vec3(1.f, 2.f, 0.6f) }; // 2x4 Angle Brick (Left)                       Needs Better Match      Broken at default rotation
-	g_lddDesignIDToblsUIName[41767] = { "2x4", 1, glm::vec3(1.f, 2.f, 0.6f) }; // 2x4 Angle Brick (Right)                      Needs Better Match
+//	g_lddDesignIDToblsUIName[41768] = { "2x4", 1, glm::vec3(1.f, 2.f, 0.6f) }; // 2x4 Angle Brick (Left)
+//	g_lddDesignIDToblsUIName[41767] = { "2x4", 1, glm::vec3(1.f, 2.f, 0.6f) }; // 2x4 Angle Brick (Right)
 	g_lddDesignIDToblsUIName[44237] = { "2x6", 1, glm::vec3(1.f, 3.f, 0.6f) }; // 2x6 Brick
 	g_lddDesignIDToblsUIName[3007] = { "2x8", 1, glm::vec3(1.f, 4.f, 0.6f) }; // 2x8 Brick
 	
@@ -195,80 +195,78 @@ void BuildConversionMapLDDToBLS()
 	
 	//------------------- Slopes -----------------
 	
-/*
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x1 Wedge
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x1 Pyramid
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Wedge
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Slope
+//	g_lddDesignIDToblsUIName[50746] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x1 Wedge
+//	g_lddDesignIDToblsUIName[22388] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x1 Pyramid
+//	g_lddDesignIDToblsUIName[85984] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Wedge
+	g_lddDesignIDToblsUIName[3040] = { "45° Ramp 1x", 2, glm::vec3(0.5f, 1.f, 0.6f) }; // 1x2 Slope
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Inverted Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 End Ridged Tile
-*/
-//	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Lattice Roof Tile
+	g_lddDesignIDToblsUIName[3665] = { "-45° Ramp 1x", 2, glm::vec3(0.5f, 1.f, 0.6f) }; // 1x2 Inverted Slope
+	g_lddDesignIDToblsUIName[3039] = { "45° Ramp 2x", 2, glm::vec3(1.f, 1.f, 0.6f) }; // 2x2 Slope
+	g_lddDesignIDToblsUIName[3044] = { "45° Crest 1x", 2, glm::vec3(0.5f, 1.f, 0.6f) }; // 1x2 Roof Tile
+	g_lddDesignIDToblsUIName[3048] = { "45° Crest End", 2, glm::vec3(0.5f, 1.f, 0.6f) }; // 1x2 End Ridged Tile
+
+//	g_lddDesignIDToblsUIName[61409] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2 Lattice Roof Tile
 	g_lddDesignIDToblsUIName[4286] = { "25° Ramp 1x", 2, glm::vec3(0.5f, 1.5f, 0.6f) }; // 1x3 Slope
-//	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x3 Inverted Slope
-//	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x3 Double Inverted Roof Tile
-/*	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x4 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x6 Brick with Bow
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Angled Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Curved Slope
+	g_lddDesignIDToblsUIName[4287] = { "-25° Ramp 1x", 2, glm::vec3(0.5f, 1.5f, 0.6f) }; // 1x3 Inverted Slope
+//	g_lddDesignIDToblsUIName[18759] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x3 Double Inverted Roof Tile
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x1 Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x2 Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Corner Brick
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Inverted Roof Tile Corner
+//	g_lddDesignIDToblsUIName[60477] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x4 Slope
+//	g_lddDesignIDToblsUIName[41762] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x6 Brick with Bow
+//	g_lddDesignIDToblsUIName[41855] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Angled Slope
+//	g_lddDesignIDToblsUIName[47457] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Curved Slope
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x1 Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Inverted Corner Brick
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Inverted Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x1 Small Nose Cone
+	g_lddDesignIDToblsUIName[3300] = { "25° Crest 2x", 2, glm::vec3(1.f, 1.f, 0.4f) }; // 2x2x1 Roof Tile
+	g_lddDesignIDToblsUIName[3043] = { "45° Crest 2x", 2, glm::vec3(1.f, 1.f, 0.6f) }; // 2x2x2 Roof Tile
+	g_lddDesignIDToblsUIName[3045] = { "45° Ramp Corner", 2, glm::vec3(1.f, 1.f, 0.6f) }; // 2x2 Corner Brick
+	g_lddDesignIDToblsUIName[3676] = { "-45° Ramp Corner", 2, glm::vec3(1.f, 1.f, 0.6f) }; // 2x2 Inverted Roof Tile Corner
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x3 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Angle Brick with Bow (Left)
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Angle Brick with Bow (Right)
+//	g_lddDesignIDToblsUIName[13548] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x1 Roof Tile
+//	g_lddDesignIDToblsUIName[3046] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2 Inverted Corner Brick
+	g_lddDesignIDToblsUIName[3660] = { "-45° Ramp 2x", 2, glm::vec3(1.f, 1.f, 0.6f) }; // 2x2 Inverted Slope
+	g_lddDesignIDToblsUIName[4589] = { "1x1 Cone", 1, glm::vec3(0.5f, 0.5f, 0.6f) }; // 1x1 Small Nose Cone
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x1 Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x2 Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Plate with Bow
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x4 Curved Brick
+//	g_lddDesignIDToblsUIName[3038] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x3 Slope
+	g_lddDesignIDToblsUIName[3037] = { "45° Ramp 4x", 2, glm::vec3(1.f, 2.f, 0.6f) }; // 2x4 Slope
+//	g_lddDesignIDToblsUIName[43721] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Angle Brick with Bow (Left)
+//	g_lddDesignIDToblsUIName[43720] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Angle Brick with Bow (Right)
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x1 Bowed Roof Ridge
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x8 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x3 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x3 Inverted Slope
+	g_lddDesignIDToblsUIName[3299] = { "25° Crest 4x", 2, glm::vec3(1.f, 2.f, 0.4f) }; // 2x4x1 Roof Tile
+	g_lddDesignIDToblsUIName[3041] = { "45° Crest 4x", 2, glm::vec3(1.f, 2.f, 0.6f) }; // 2x4x2 Roof Tile
+//	g_lddDesignIDToblsUIName[88930] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Plate with Bow
+//	g_lddDesignIDToblsUIName[6191] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x4 Curved Brick
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x3 Brick with Arch
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Left Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Right Roof Tile
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3 Slope
+//	g_lddDesignIDToblsUIName[6192] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x1 Bowed Roof Ridge
+//	g_lddDesignIDToblsUIName[4445] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x8 Slope
+	g_lddDesignIDToblsUIName[3298] = { "25° Ramp 2x", 2, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Slope
+	g_lddDesignIDToblsUIName[3747] = { "-25° Ramp 2x", 2, glm::vec3(1.f, 1.5f, 0.6f) }; // 2x3 Inverted Slope
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3 Corner Brick
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3 Inverted Corner Brick
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x4 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Slope
+//	g_lddDesignIDToblsUIName[6215] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x3 Brick with Arch
+//	g_lddDesignIDToblsUIName[43710] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Left Roof Tile
+//	g_lddDesignIDToblsUIName[43711] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Right Roof Tile
+//	g_lddDesignIDToblsUIName[4161] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3 Slope
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 4x4 Tilted Corner
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x6 Brick with Bow
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x6 Angle Shell with Bow (Left)
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x6 Angle Shell with Bow (Right)
+	g_lddDesignIDToblsUIName[3675] = { "25° Ramp Corner", 2, glm::vec3(1.5f, 1.5f, 0.6f) }; // 3x3 Corner Brick
+//	g_lddDesignIDToblsUIName[99301] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3 Inverted Corner Brick
+//	g_lddDesignIDToblsUIName[3297] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x4 Slope
+//	g_lddDesignIDToblsUIName[30363] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4 Slope
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x1x2 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x2 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x3x2 Bow Brick
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3x2 Arch Brick
+//	g_lddDesignIDToblsUIName[43708] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 4x4 Tilted Corner
+//	g_lddDesignIDToblsUIName[44126] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x6 Brick with Bow
+//	g_lddDesignIDToblsUIName[41748] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x6 Angle Shell with Bow (Left)
+//	g_lddDesignIDToblsUIName[41747] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x6 Angle Shell with Bow (Right)
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x2 Arch
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x2 Top
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2x3 Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x3 Slope
+//	g_lddDesignIDToblsUIName[60481] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x1x2 Slope
+//	g_lddDesignIDToblsUIName[3678] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x2 Slope
+//	g_lddDesignIDToblsUIName[33243] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x3x2 Bow Brick
+//	g_lddDesignIDToblsUIName[88293] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 3x3x2 Arch Brick
 	
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 1x2x3 Inverted Slope
-	g_lddDesignIDToblsUIName[25269] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x2x3 Corner Brick
-*/
+//	g_lddDesignIDToblsUIName[4744] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x2 Arch
+//	g_lddDesignIDToblsUIName[6216] = { "1x1F", 1, glm::vec3(0.5f, 0.5f, 0.2f) }; // 2x4x2 Top
+	g_lddDesignIDToblsUIName[4460] = { "72° Ramp 1x", 2, glm::vec3(0.5f, 1.f, 1.8f) }; // 1x2x3 Slope
+	g_lddDesignIDToblsUIName[30499] = { "72° Ramp 2x", 2, glm::vec3(1.f, 1.f, 1.8f) }; // 2x2x3 Slope
+	
+	g_lddDesignIDToblsUIName[2449] = { "-72° Ramp 1x", 2, glm::vec3(0.5f, 1.f, 1.8f) }; // 1x2x3 Inverted Slope
+	g_lddDesignIDToblsUIName[3685] = { "72° Ramp Corner", 2, glm::vec3(1.f, 1.f, 1.8f) }; // 2x2x3 Corner Brick
 }
 
 blsGroup *blsGroup::CreateFromLDDGroup(std::shared_ptr<lddGroup> sourceGroup, std::shared_ptr<blsColorset> colorset)
