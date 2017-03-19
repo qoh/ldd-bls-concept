@@ -61,7 +61,11 @@ inline float hslcDif(glm::vec4 &a, glm::vec4 &b)
 	pt2.y = b.w * sin(theta2);
 	pt2.z = b.z;
 
+#if 1
+	return sqrt(pow(pt1.x - pt2.x, 2.f) + pow(pt1.y - pt2.y, 2.f) + pow(pt1.z - pt2.z, 2.f));
+#else
 	return glm::distance(pt1, pt2);
+#endif
 }
 
 struct blsColor
