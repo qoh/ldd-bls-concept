@@ -23,11 +23,11 @@ int main(int argc, char *argv[])
 
 	std::shared_ptr<lddGroup> inputGroup(lddGroup::CreateFromFile(inputFile.c_str()));
 	std::shared_ptr<blsColorset> inputColorset(blsColorset::CreateFromFile(inputColorsetFile.c_str()));
-	std::shared_ptr<blsGroup> outputGroup(blsGroup::CreateFromLDDGroup(inputGroup.get(), inputColorset.get()));
+	std::shared_ptr<blsGroup> outputGroup(blsGroup::CreateFromLDDGroup(inputGroup, inputColorset));
 
 
 
-
+	outputGroup->WriteToFile(outputFile.c_str());
 
 
 

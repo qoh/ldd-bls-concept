@@ -14,7 +14,8 @@ struct lddBrick
 	int designID;
 	glm::mat3 scaleRotation;
 	glm::vec3 translation;
-	glm::vec4 color;
+	glm::vec4 rgba;
+	glm::vec4 hslc;
 };
 
 struct lddGroup

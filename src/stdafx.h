@@ -8,6 +8,8 @@
 #include <cassert>
 #include <inttypes.h>
 
+#include <iomanip>
+#include <fstream>
 #include <iostream>
 #include <thread>
 #include <mutex>

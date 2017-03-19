@@ -58,13 +58,13 @@ lddGroup *lddGroup::CreateFromFile(const char *file)
 		// Color
 		string rgbaStr(part.attribute("RGBA").as_string());
 		std::replace(rgbaStr.begin(), rgbaStr.end(), ',', ' ');
-		glm::vec4 color;
+		glm::vec4 color; // rgba
 		istringstream(rgbaStr) >> color[0] >> color[1] >> color[2] >> color[3];
 		color[0] *= inv255; color[1] *= inv255; color[2] *= inv255;
 	//	printf("RGBA: %s\n", rgbaStr.c_str());
 	//	printf("RGBA: %f %f %f %f\n", color[0], color[1], color[2], color[3]);
 
-		group->bricks.push_back(new lddBrick({ designID, rotationScale, translation, color }));
+		group->bricks.push_back(new lddBrick({ designID, rotationScale, translation, color, rgbaToHslc(color) }));
 	}
 
 	printf("    Found %lld bricks.\n", group->bricks.size());
