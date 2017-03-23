@@ -68,6 +68,16 @@ inline float hslcDif(glm::vec4 &a, glm::vec4 &b)
 #endif
 }
 
+inline float hslcaDif(glm::vec4 &a, float &aAlpha, glm::vec4 &b, float bAlpha)
+{
+	if ((aAlpha != 1.f && bAlpha == 1.f) || (aAlpha == 1.f && bAlpha != 1.f))
+		return 1e16f;
+	float dif = hslcDif(a, b);
+	if (aAlpha != 1.f && bAlpha != 1.f)
+		dif += abs(aAlpha - bAlpha) * 0.25f;
+	return dif;
+}
+
 struct blsColor
 {
 	glm::vec4 rgba;
